@@ -1,36 +1,37 @@
 #include<iostream>
 using namespace std;
+ 
+ int linearSearch(int arr[],int n,int key)
+{
+    for(int i=0;i<n;i++){
+        if(arr[i]==key){
+            return i;
+        }
+     }
+     return -1;
+  
+    
+
+
+}
+
+
+
 int main()
 {
-	int num,i,j,k,l,flag=0; 
-    cout<<"enter the order of the matrx  ";
-    cin>>k>>l;
-    int arr[k][l];
-	cout<<"enter your 2d array of  "<<k<<"*"<<l <<"order"<<endl;
-	for(i=0;i<k;i++)                                                  //taking input from keyboard
-	{
-		for(j=0;j<l;j++)
-		{
-			cin>>arr[i][j];
-		}
-	}
-	cout<<"which element you want to find = ";
-	cin>>num;
-		for(i=0;i<k;i++)                                      //linear searching logic
-	{	
-		for(j=0;j<l;j++)
-		{
-			if(num==arr[i][j])
-			{
-				flag=1;
-				cout<<"your element is found at arr["<<i<<"]["<<j<<"]";
-				break;
-		}
-		}
-	}
-	if(flag==0)
-	{
-		cout<<"element not found";
-	}
-	return 0;
+int n;
+cout<<"enter the size of array"<<endl;
+cin>>n;
+int arr[n];
+for(int i=0;i<n;i++){
+    cin>>arr[i];
+
+}
+  int key;
+  cout<<"enter the value which u want to search"<<endl;
+cin>>key;
+ cout<<linearSearch(arr,n,key);
+
+
+    return 0;
 }
